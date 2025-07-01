@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const pagesRoutes = require("./routes/pages.route");
 const authRoutes = require("./routes/auth.route");
+require("dotenv").config()
 
 
 const port = 3000;
@@ -17,7 +18,7 @@ app.listen(port, () => console.log(`Server is running on port ${port}`));
 // Mongo DB connection
 const mongoose = require("mongoose");
 
-const dbConnection = "mongodb+srv://babu:puxvox-zAddov-3cytna@mongodb.fd22wls.mongodb.net/?retryWrites=true&w=majority&appName=mongodb";
+const dbConnection = process.env.dbConnection
 
 mongoose.connect(dbConnection).then(() => 
     {
