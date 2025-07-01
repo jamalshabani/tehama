@@ -1,0 +1,72 @@
+<form class="regform"  action="/submission" method="POST" encType="multipart/form-data">
+    <!-- progressbar -->
+    <ul id="progressbar">
+        <li class="active">Personal Informations</li>
+        <li>Submission Informations</li>
+        <li>Submit</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset id="first">
+        <h2 class="title">Personal Informations</h2>
+        <input type="text" value="<%= user.firstname %>" readonly class="text_field" name="firstname"/>
+        <br/>
+        <input type="text" value="<%= user.lastname %>" readonly class="text_field" name="lastname"/>
+        <br/>
+        <input type="email" value="<%= user.email %>" readonly class="text_field" name="email"/>
+        <br/>
+        <input type="button" class="next_btn margin-0" value="Next >" />
+    </fieldset>
+    <fieldset>
+        <h2 class="title">Submission Informations</h2>
+        <select name="category" class="options">
+            <option>-- Select Category --</option>
+            <option>01. Innovation In ICT Products or Services</option>
+            <option>02. Best use of ICT</option>
+            <option>03. ICT for Social Impact</option>
+            <option>04. Young ICT Achiever</option>
+            <option>05. Women in ICT</option>
+            <option>06. ICT Security</option>
+            <option>07. Public Sector ICT Project</option>
+            <option>08. Sustainable ICT</option>
+            <option>09. The TISPA Awards for Best Internet Connectivity Provider</option>
+            <option>10. The MCIT Lifetime Achievement In ICT</option>
+        </select>
+        <br/>
+        <select name="submitter" class="options">
+            <option>-- Submitting as --</option>
+            <option>An individual</option>
+            <option>An organisation</option>
+            <option>A company</option>
+        </select>
+        <input type="text" class="text_field" name="title" placeholder="Submission title" />
+        <br/>
+        <input id="input-b1" name="pdfFile" type="file" class="file pt-1" data-browse-on-zone-click="true">
+        <br/>
+        <textarea name="details" cols="30" rows="10" placeholder="Submission details"></textarea>
+        <input type="button" class="pre_btn" value="< Back" />
+        <input type="button" class="next_btn" value="Next >" />
+    </fieldset>
+    <!-- <fieldset>
+        <h2 class="title">Preview submission</h2>
+        <ul id="preview">
+            <li>
+                <embed src="/submissions/Resume.pdf" type="application/pdf" width="100%" height="400px"/>
+            </li>
+            <li><span>Name :</span> <%= user.firstname %> <%= user.lastname %> </li>
+            <li><span>E-mail :</span> <%= user.email %> </li>
+            <li><span>Category :</span> Best AI</li>
+            <li><span>Submitted as :</span> an individual</li>
+            <li><span>Submission details :</span> HD</li>
+        </ul>
+        <input type="button" class="pre_btn" value="< Back" />
+        <input type="button" class="next_btn" value="Next >" />
+    </fieldset> -->
+    <fieldset>
+        <h2 class="title">Are you ready to submit?</h2>
+        <div class="term-and-conditions">
+            Click the submit button below
+        </div>
+        <input type="button" class="pre_btn" value="< Back" />
+        <input style="background: #1375bc; color: white;" type="submit" class="next_btn" value="SUBMIT >" />
+    </fieldset>
+</form>

@@ -1,0 +1,95 @@
+<!--Header area start here-->
+<header>
+    <div class="header-top-area hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="header-top-left">
+                        <ul>
+                            <li><i class="fa fa-envelope-o"></i><a href="mailto:info@tehamaawards.co.tz">info@tehamaawards.co.tz</a></li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+255 759 993 969">+255 759 993 969</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="right-side-tool text-right">
+                        <div class="social-media-area">
+                            <ul>
+                                <li><a href="https://www.instagram.com/tehamaawards" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/people/TehamaAwards/61563554183681/?mibextid=qi2Omg&rdid=srO49I4nsE7JC0zW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FBE53NaMU6MbHDoFv%2F%3Fmibextid%3Dqi2Omg" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://x.com/TehamaAwards?s=09" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="header-top-right">
+                            <ul>
+                                <% if (locals.user) { %>
+                                    <li><i class="fa fa-sign-out"></i><a href="/signout">Sign out</a></li>
+                                <% } else { %>
+                                    <li><i class="fa fa-sign-in"></i><a href="/signin">Sign in</a></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle-area" id="sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="/"><img src="images/logo-blue.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li class="<%= url === '/' ? "active" : "noaction" %> "><a href="/"><i class="fa fa-users"></i> Home</a></li>
+                                <li class="<%= url === '/categories' ? "active" : "noaction" %> ""><a href="/categories"><i class="fa fa-th-list"></i> Categories </a></li>
+                                <li class="<%= url === '/submission' ? "active" : "noaction" %> ""><a href="/submission"><i class="fa fa-upload"></i> Submission </a></li>
+                                <li class="<%= url === '/selection' ? "active" : "noaction" %> ""><a href="/selection"><i class="fa fa-check"></i> Selection </a></li>
+                                <li class="<%= url === '/sponsorship' ? "active" : "noaction" %> ""><a href="/sponsorship"><i class="fa fa-money"></i> Sponsorship </a></li>
+                                <li class="<%= url === '/gallery' ? "active" : "noaction" %> ""><a href="/gallery"><i class="fa fa-camera"></i> Gallery </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <% if (locals.user) { %>
+                    <div class="col-lg-1 col-md-1 col-sm-12">
+                        <div class="cart-area">
+                            <a href="/profile">Hi, <%= user.firstname %></a>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <!-- Slide Menu Section Start Here -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="mobile-logo-area">
+                <a href="/"><img src="images/logo-blue.png" height="100" alt="logo"></a>
+            </div>
+            <div class="row">
+                <div class="col-md-12">                            
+                    <div class="mobile-menu">                                
+                        <nav id="dropdown">
+                            <ul>
+                                <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="/nominations"><i class="fa fa-users"></i> Nominations </a></li>
+                                <li><a href="/selection"><i class="fa fa-th-list"></i> Selection </a></li>
+                                <li><a href="/sponsorship"><i class="fa fa-money"></i> Sponsorship </a></li>
+                                <li><a href="/gallery"><i class="fa fa-camera"></i> Gallery </a></li>
+                                <li><a href="/signin"><i class="fa fa-sign-in"></i> Sign in </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Header area end here-->

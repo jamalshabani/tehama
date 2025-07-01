@@ -1,0 +1,72 @@
+<form action="/signin" method="POST" class="row g-3 needs-validation" novalidate>
+    <fieldset>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <input type="email" placeholder="Please enter your email" name="email" class="form-control" required autocomplete = "off">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your email
+                </div>
+                <% if (errors) { %>
+                    <p style="color: red;"><%= errors.email %></p>
+                <%}%>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Password *</label>
+                <input type="password" placeholder="Please enter your password" name="password" class="form-control" required autocomplete = "off">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your password
+                </div>
+                <% if (errors) { %>
+                    <p style="color: red;"><%= errors.password %></p>
+                <%}%>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div class="connected-area">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <p><a href="/signup">Don't have an account? <span style="color: black;">SIGN UP.</span> </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn-send" type="submit"> <i class="fa fa-sign-in"></i> Sign in</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<script>
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
