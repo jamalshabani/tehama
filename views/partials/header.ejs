@@ -49,21 +49,15 @@
                             <ul>
                                 <li class="<%= url === '/' ? "active" : "noaction" %> "><a href="/"><i class="fa fa-users"></i> Home</a></li>
                                 <li class="<%= url === '/categories' ? "active" : "noaction" %> ""><a href="/categories"><i class="fa fa-th-list"></i> Categories </a></li>
-                                <li class="<%= url === '/submission' ? "active" : "noaction" %> ""><a href="/submission"><i class="fa fa-upload"></i> Submission </a></li>
+                                <li class="<%= url === '/nomination' ? "active" : "noaction" %> ""><a href="/nomination"><i class="fa fa-pencil-square"></i> Nomination </a></li>
                                 <li class="<%= url === '/selection' ? "active" : "noaction" %> ""><a href="/selection"><i class="fa fa-check"></i> Selection </a></li>
                                 <li class="<%= url === '/sponsorship' ? "active" : "noaction" %> ""><a href="/sponsorship"><i class="fa fa-money"></i> Sponsorship </a></li>
                                 <li class="<%= url === '/gallery' ? "active" : "noaction" %> ""><a href="/gallery"><i class="fa fa-camera"></i> Gallery </a></li>
+                                <li class="<%= url === '/winners' ? "active" : "noaction" %> ""><a href="/winners"><i class="fa fa-trophy"></i> Winners </a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <% if (locals.user) { %>
-                    <div class="col-lg-1 col-md-1 col-sm-12">
-                        <div class="cart-area">
-                            <a href="/profile">Hi, <%= user.firstname %></a>
-                        </div>
-                    </div>
-                <% } %>
             </div>
         </div>
     </div>

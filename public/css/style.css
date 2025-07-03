@@ -55,7 +55,6 @@ body {
   height: 100%;
   font-size: 14px;
   color: #333333;
-  font-family: 'Roboto', sans-serif;
   vertical-align: baseline;
   line-height: 26px;
   font-weight: 400;
@@ -104,7 +103,6 @@ h5,
 h6 {
   margin: 0 0 26px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
 }
 a {
   transition: all 0.5s ease 0s;
@@ -447,7 +445,6 @@ ul {
   color: #444444;
   font-weight: 500;
   transition: all 0.5s ease 0s;
-  font-family: 'Roboto', sans-serif;
 }
 .header-middle-area .main-menu ul li a i {
   margin-left: 10px;
@@ -504,7 +501,6 @@ ul {
   text-transform: none;
   transition: all 0.5s ease 0s;
   color: #444444 !important;
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 .header-middle-area .main-menu ul li ul li a:hover {
@@ -1020,7 +1016,6 @@ ul {
 .home-about-photo-contest-area .countdown-section .time_circles > div span {
   font-weight: 300;
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
 }
 .home-about-photo-contest-area .countdown-section .time_circles > div h4 {
   font-size: 15px;
@@ -2279,7 +2274,6 @@ ul {
   color: #382d44;
   font-size: 24px;
   margin-left: 15px;
-  font-family: 'Roboto', sans-serif;
 }
 .related-product-area .single-product-area {
   margin: 15px;
@@ -2436,7 +2430,6 @@ ul {
 .winner-page-list .single-product-area .product-content h3 {
   margin: 0px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
 }
 .winner-page-list .single-product-area .product-content h3 a {
   display: block;
@@ -2680,7 +2673,6 @@ ul {
 .single-photo-contest-area .about-content ul.home-single-slide .countdown-section .time_circles > div span {
   font-weight: 300;
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
 }
 .single-photo-contest-area .about-content ul.home-single-slide .countdown-section .time_circles > div h4 {
   font-size: 15px;
@@ -3098,7 +3090,6 @@ ul {
   font-size: 20px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -3191,7 +3182,6 @@ ul {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -3213,7 +3203,6 @@ ul {
   font-size: 18px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
 }
 .single-blog-page-area .author-comment {
@@ -3225,7 +3214,6 @@ ul {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
   text-decoration: none;
 }
@@ -3249,7 +3237,6 @@ ul {
   font-size: 18px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 5px;
 }
 .single-blog-page-area .author-comment .single-author-comment .author-post .media-body ul {
@@ -3274,7 +3261,6 @@ ul {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -3332,7 +3318,6 @@ ul {
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
 }
 .sidebar-area .single-sidebar h2:after {
@@ -3443,7 +3428,6 @@ ul {
   font-size: 30px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -3495,7 +3479,6 @@ ul {
   font-size: 30px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -3610,7 +3593,6 @@ ul {
 }
 .loginregistration-area .login-area h2 {
   color: #222222;
-  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 50px;
@@ -3720,7 +3702,6 @@ ul {
 }
 .loginregistration-area .registration-area h2 {
   color: #222222;
-  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 50px;
@@ -3922,7 +3903,6 @@ ul {
   font-size: 20px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -4010,7 +3990,6 @@ ul {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -4032,7 +4011,6 @@ ul {
   font-size: 18px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
 }
 .single-blog-page-area .author-post .about-author-post .single-author-post .media .pull-left {
@@ -4047,7 +4025,6 @@ ul {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
   text-decoration: none;
 }
@@ -4068,7 +4045,6 @@ ul {
   font-size: 18px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 5px;
 }
 .single-blog-page-area .author-comment .single-author-comment .media .media-body ul {
@@ -4093,7 +4069,6 @@ ul {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 40px;
   text-decoration: none;
 }
@@ -4393,7 +4368,6 @@ ul {
   color: #000000;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
   transition: all 0.5s ease 0s;
   position: relative;
   text-transform: uppercase;
@@ -6408,7 +6382,6 @@ ul {
 .related-product-area .single-product-store .product-content h3 {
   margin: 0px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
 }
 .related-product-area .single-product-store .product-content h3:after {
   display: none;

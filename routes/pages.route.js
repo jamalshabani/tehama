@@ -1,26 +1,26 @@
 const express = require("express");
 const router = express.Router();
-const { getHome, getCategories, getSubmission, getSelection, getSponsorship, getGallery, getProfile } = require("../controllers/pages.controller");
+const { getHome, getCategories, getNomination, getSelection, getSponsorship, getGallery, getWinners } = require("../controllers/pages.controller");
 const { postSubmission } = require("../controllers/submission.controller");
 const { requireAuth, getCurrentUser } = require("../middlewares/auth.middleware");
 const { getUserSubmissions } = require("../middlewares/submission.middleware");
 
 
-router.get("/", getCurrentUser, getHome);
+router.get("/", getHome);
 
-router.get("/categories", getCurrentUser, getCategories);
+router.get("/categories", getCategories);
 
-router.get("/submission", requireAuth, getCurrentUser, getSubmission);
+router.get("/nomination", getNomination);
 
-router.post("/submission", getCurrentUser, postSubmission);
+router.post("/submission", postSubmission);
 
-router.get("/selection", getCurrentUser, getSelection);
+router.get("/selection", getSelection);
 
-router.get("/sponsorship", getCurrentUser, getSponsorship);
+router.get("/sponsorship", getSponsorship);
 
-router.get("/gallery", getCurrentUser, getGallery);
+router.get("/gallery", getGallery);
 
-router.get("/profile", requireAuth, getCurrentUser, getUserSubmissions, getProfile);
+router.get("/winners", getWinners);
 
 // 404
 router.use((req, res) => {

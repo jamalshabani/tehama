@@ -8,11 +8,11 @@
     <!-- fieldsets -->
     <fieldset id="first">
         <h2 class="title">Personal Informations</h2>
-        <input type="text" value="<%= user.firstname %>" readonly class="text_field" name="firstname"/>
+        <input type="text" class="text_field" name="firstname"/>
         <br/>
-        <input type="text" value="<%= user.lastname %>" readonly class="text_field" name="lastname"/>
+        <input type="text" class="text_field" name="lastname"/>
         <br/>
-        <input type="email" value="<%= user.email %>" readonly class="text_field" name="email"/>
+        <input type="email" class="text_field" name="email"/>
         <br/>
         <input type="button" class="next_btn margin-0" value="Next >" />
     </fieldset>
@@ -46,21 +46,6 @@
         <input type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn" value="Next >" />
     </fieldset>
-    <!-- <fieldset>
-        <h2 class="title">Preview submission</h2>
-        <ul id="preview">
-            <li>
-                <embed src="/submissions/Resume.pdf" type="application/pdf" width="100%" height="400px"/>
-            </li>
-            <li><span>Name :</span> <%= user.firstname %> <%= user.lastname %> </li>
-            <li><span>E-mail :</span> <%= user.email %> </li>
-            <li><span>Category :</span> Best AI</li>
-            <li><span>Submitted as :</span> an individual</li>
-            <li><span>Submission details :</span> HD</li>
-        </ul>
-        <input type="button" class="pre_btn" value="< Back" />
-        <input type="button" class="next_btn" value="Next >" />
-    </fieldset> -->
     <fieldset>
         <h2 class="title">Are you ready to submit?</h2>
         <div class="term-and-conditions">

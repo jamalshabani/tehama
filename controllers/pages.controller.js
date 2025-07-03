@@ -8,8 +8,8 @@ const getCategories = (req, res) => {
     res.render("pages/categories", {title: "Categories"});
 }
 
-const getSubmission = (req, res) => {
-    res.render("pages/submission", {title: "Submission"});
+const getNomination = (req, res) => {
+    res.render("pages/nomination", {title: "Nomination"});
 }
 
 const getSelection = (req, res) => {
@@ -24,17 +24,17 @@ const getGallery = (req, res) => {
     res.render("pages/gallery", {title: "Gallery"});
 }
 
-const getProfile = (req, res) => {
-    res.render("pages/profile", {title: "Profile"});
+const getWinners = (req, res) => {
+    res.render("pages/winners", {title: "Winners"});
 }
 
 
 module.exports = {
     getHome,
     getCategories,
-    getSubmission,
+    getNomination,
     getSelection,
     getSponsorship,
     getGallery,
-    getProfile
+    getWinners
 }
