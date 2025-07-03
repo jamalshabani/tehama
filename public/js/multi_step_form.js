@@ -48,7 +48,7 @@ $(".submit_btn").click(function(event){
 	$(this).parent().next().fadeIn('slow');
 	$(this).parent().css({'display':'none'});
 //Adding class active to show steps forward;
-	$('.active').next().addClass('active');
+	$('.li-active').next().addClass('li-active active');
 	});
 	
 	$(".pre_btn").click(function(){            //Function runs on PREVIOUS button click 

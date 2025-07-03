@@ -1,21 +1,107 @@
 <form class="regform"  action="/submission" method="POST" encType="multipart/form-data">
     <!-- progressbar -->
     <ul id="progressbar">
-        <li class="active">Personal Informations</li>
-        <li>Submission Informations</li>
+        <li class="active li-active">Contact Info</li>
+        <li>Nomination Info</li>
+        <li>Additional Info</li>
         <li>Submit</li>
     </ul>
     <!-- fieldsets -->
     <fieldset id="first">
-        <h2 class="title">Personal Informations</h2>
+        <h2 class="title">Contact Info</h2>
+        <select name="nomination" id="nomination" class="options" required>
+            <option value="" disabled selected hidden>Select Nomination type*</option>
+            <option>I am nominating myself</option>
+            <option>I am nominating someone else</option>
+            <option>I am nominating an organisation</option>
+        </select>
+        <br/>
+        <select name="category" id="categories" class="options" required>
+            <option value="" disabled selected hidden>Select Nomination Category*</option>
+            <option value="category1">Innovation In ICT Products or Services</option>
+            <option value="category2">Best use of ICT</option>
+            <option value="category3">ICT for Social Impact</option>
+            <option value="category4">Young ICT Achiever</option>
+            <option value="category5">Women in ICT</option>
+            <option value="category6">ICT Security</option>
+            <option value="category7">Public Sector ICT Project</option>
+            <option value="category8">Sustainable ICT</option>
+            <option value="category9">The TISPA Awards for Best Internet Connectivity Provider</option>
+            <option value="category10">The MCIT Lifetime Achievement In ICT</option>
+        </select>
+        <select class="subcatagories" required>
+            <option value="" disabled selected hidden>Select Nomination Subcategory*</option>
+            <!-- Innovation In ICT Products or Services -->
+            <optgroup data-rel="category1">
+                <option value="1">Disruptive Technologies</option>
+                <option value="2">Emerging Technologies</option>
+            </optgroup>
+            <!-- Best use of ICT -->
+            <optgroup data-rel="category2">
+                <option value="1">Best Use of ICT in Healthcare</option>
+                <option value="2">Best Use of ICT in Education</option>
+                <option value="3">Best Use of ICT in Finance</option>
+            </optgroup>
+            <!-- ICT for Social Impact -->
+            <optgroup data-rel="category3">
+                <option value="1">Bridging the Digital Divide</option>
+                <option value="2">Addressing Social Issue</option>
+            </optgroup>
+            <!-- Young ICT Achiever -->
+            <optgroup data-rel="category4">
+                <option value="1">Young Programmer/Programmer</option>
+                <option value="2">Student Entrepreneur</option>
+            </optgroup>
+            <!-- Women in ICT -->
+            <optgroup data-rel="category5">
+                <option value="1">Female Innovator</option>
+                <option value="2">Female Tech Leader</option>
+            </optgroup>
+            <!-- ICT Security -->
+            <optgroup data-rel="category6">
+                <option value="1">Cybersecurity Innovation</option>
+                <option value="2">Best Practices in Data Protection</option>
+            </optgroup>
+            <!-- Public Sector ICT Project -->
+            <optgroup data-rel="category7">
+                <option value="1">Enhanced Citizen Engagement</option>
+                <option value="2">Streamlined Bureaucracy</option>
+            </optgroup>
+            <!-- Sustainable ICT -->
+            <optgroup data-rel="category8">
+                <option value="1">Energy-Efficient Technologies</option>
+                <option value="2">Green DataCenters</option>
+            </optgroup>
+            <!-- The TISPA Awards for Best Internet Connectivity Provider -->
+            <optgroup data-rel="category9">
+                <option value="1">Best ISP (Internet Service Provider)</option>
+                <option value="2">Best MNO (Mobile Network Operator)</option>
+                <option value="3">Best Carrier Provider</option>
+            </optgroup>
+            <!-- The MCIT Lifetime Achievement In ICT -->
+            <optgroup data-rel="category10">
+                <option value="1">Public Sector</option>
+                <option value="2">Private Sector</option>
+            </optgroup>
+            
+        </select>
+        <br/>
+        <input type="email" class="text_field" name="email"/>
+        <br/>
+        <input type="button" class="next_btn margin-0" value="Next >" />
+    </fieldset>
+    <fieldset>
+        <h2 class="title">Nomination Info</h2>
         <input type="text" class="text_field" name="firstname"/>
         <br/>
         <input type="text" class="text_field" name="lastname"/>
         <br/>
         <input type="email" class="text_field" name="email"/>
         <br/>
-        <input type="button" class="next_btn margin-0" value="Next >" />
+        <input type="button" class="pre_btn" value="< Back" />
+        <input type="button" class="next_btn margin-0" value="Next >"/>
     </fieldset>
+    
     <fieldset>
         <h2 class="title">Submission Informations</h2>
         <select name="category" class="options">
