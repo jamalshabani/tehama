@@ -228,3 +228,7 @@ input[type="file"]:before{
 }
 
 select:invalid { color: gray; }
+
+.hiddenField {
+    display: none;
+}

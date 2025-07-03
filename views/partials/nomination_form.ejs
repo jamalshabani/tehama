@@ -1,15 +1,17 @@
 <form class="regform"  action="/submission" method="POST" encType="multipart/form-data">
     <!-- progressbar -->
     <ul id="progressbar">
-        <li class="active li-active">Contact Info</li>
-        <li>Nomination Info</li>
+        <li class="active li-active">Nomination Info</li>
+        <li id="hidden_div">Nominator Info</li>
+        <li>Nominee Info</li>
+        <li>Nomination Details</li>
         <li>Additional Info</li>
         <li>Submit</li>
     </ul>
     <!-- fieldsets -->
     <fieldset id="first">
-        <h2 class="title">Contact Info</h2>
-        <select name="nomination" id="nomination" class="options" required>
+        <h2 class="title">Nomination Info</h2>
+        <select name="nomination" id="nomination" onchange="showDiv(this)" class="options" required>
             <option value="" disabled selected hidden>Select Nomination type*</option>
             <option>I am nominating myself</option>
             <option>I am nominating someone else</option>
@@ -83,59 +85,80 @@
                 <option value="1">Public Sector</option>
                 <option value="2">Private Sector</option>
             </optgroup>
-            
         </select>
-        <br/>
-        <input type="email" class="text_field" name="email"/>
         <br/>
         <input type="button" class="next_btn margin-0" value="Next >" />
     </fieldset>
-    <fieldset>
-        <h2 class="title">Nomination Info</h2>
-        <input type="text" class="text_field" name="firstname"/>
+    <!-- Add and remove a class -->
+    <fieldset id="hidden_div">
+        <h2 class="title">Nominator Info</h2>
+        <input type="text" placeholder="Nominator Full Name*" class="text_field" name="nominator_name"/>
         <br/>
-        <input type="text" class="text_field" name="lastname"/>
+        <input type="email" placeholder="Nominator Email*" class="text_field" name="nominator_email"/>
         <br/>
-        <input type="email" class="text_field" name="email"/>
+        <input type="text" placeholder="Nominator Phone Number*" class="text_field" name="nominator_phone"/>
         <br/>
         <input type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn margin-0" value="Next >"/>
     </fieldset>
-    
     <fieldset>
-        <h2 class="title">Submission Informations</h2>
-        <select name="category" class="options">
-            <option>-- Select Category --</option>
-            <option>01. Innovation In ICT Products or Services</option>
-            <option>02. Best use of ICT</option>
-            <option>03. ICT for Social Impact</option>
-            <option>04. Young ICT Achiever</option>
-            <option>05. Women in ICT</option>
-            <option>06. ICT Security</option>
-            <option>07. Public Sector ICT Project</option>
-            <option>08. Sustainable ICT</option>
-            <option>09. The TISPA Awards for Best Internet Connectivity Provider</option>
-            <option>10. The MCIT Lifetime Achievement In ICT</option>
-        </select>
+        <h2 class="title">Nominee Info</h2>
+        <input type="text" placeholder="Nominee Full Name*" class="text_field" name="nominee_name"/>
         <br/>
-        <select name="submitter" class="options">
-            <option>-- Submitting as --</option>
-            <option>An individual</option>
-            <option>An organisation</option>
-            <option>A company</option>
-        </select>
-        <input type="text" class="text_field" name="title" placeholder="Submission title" />
+        <input type="email" placeholder="Nominee Email*" class="text_field" name="nominee_email"/>
         <br/>
+        <input type="text" placeholder="Nominee Phone Number*" class="text_field" name="nominee_phone"/>
+        <br/>
+        <input type="text" placeholder="Website (if applicable)" class="text_field" name="website"/>
+        <br/>
+        <input type="button" class="pre_btn" value="< Back" />
+        <input type="button" class="next_btn margin-0" value="Next >"/>
+    </fieldset>
+    <fieldset>
+        <h2 class="title">Nomination Details</h2>
+        <textarea name="nomination_reason" cols="40" rows="10" class="text_field" placeholder="Reason for Nomination (Explain why the nominee deserves this award. Include details about their contributions, achievements, and impact. Maximum 300 words)*"></textarea>
+        <br/>
+        <textarea name="supporting_evidence" cols="40" rows="10" class="text_field" placeholder="Supporting Evidence: (Provide specific examples, data, or case studies that support the nomination. Maximum 300 words)*"></textarea>
+        <br/>
+        <textarea name="impact" cols="40" rows="10" class="text_field" placeholder="Impact: (Describe the tangible positive effects of the nominee's contributions on their intended audience or sector. Maximum 300 words)*"></textarea>
+        <br/>
+        <textarea name="innovation" cols="40" rows="10" class="text_field" placeholder="Innovation: (Explain the novelty and creativity of the nominee's solutions, demonstrating a departure from traditional methods. Maximum 300 words)*"></textarea>
+        <br/>
+        <textarea name="sustainability" cols="40" rows="10" class="text_field" placeholder="Sustainability: (Detail the long-term viability and scalability of the nominee's project or initiative. Maximum 300 words)*"></textarea>
+        <br/>
+        <textarea name="inclusivity" cols="40" rows="10" class="text_field" placeholder="Inclusivity: (Discuss how the nominee's work promotes digital inclusion and ensures access to ICT tools and resources for diverse populations. Maximum 300 words)*"></textarea>
+        <br/>
+        <input type="button" class="pre_btn" value="< Back" />
+        <input type="button" class="next_btn margin-0" value="Next >"/>
+    </fieldset>
+    <fieldset>
+        <input type="text" class="text_field" name="reference_one" placeholder="Reference 1 Full Name" />
+        <br/>
+        <input type="text" class="text_field" name="reference_one" placeholder="Reference 1 Full Name" />
+        <br/>
+        <input type="text" class="text_field" name="reference_one" placeholder="Reference 1 Full Name" />
+        <br/>
+        <input type="text" class="text_field" name="reference_two_name" placeholder="Reference 2 Full Name" />
+        <br/>
+        <input type="text" class="text_field" name="reference_two_phone" placeholder="Reference 2 Phone Number" />
+        <br/>
+        <input type="text" class="text_field" name="reference_two_email" placeholder="Reference 2 Email" />
+        <br/>
+        Attachments: (Upload any additional documents, reports, or media that support the nomination. Maximum 5 files)
         <input id="input-b1" name="pdfFile" type="file" class="file pt-1" data-browse-on-zone-click="true">
         <br/>
-        <textarea name="details" cols="30" rows="10" placeholder="Submission details"></textarea>
         <input type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn" value="Next >" />
     </fieldset>
     <fieldset>
         <h2 class="title">Are you ready to submit?</h2>
         <div class="term-and-conditions">
-            Click the submit button below
+            I confirm that the information provided in this nomination form is accurate and true to the best of my knowledge.
+
+I agree to be contacted for further information if required.
+
+For Nominator (i declare that there is no conflict of interest to the nominee i have chosen)
+            <input type="checkbox">  I authorize the TEHAMA Awards committee to use the information provided in this nomination for award purposes.
         </div>
         <input type="button" class="pre_btn" value="< Back" />
         <input style="background: #1375bc; color: white;" type="submit" class="next_btn" value="SUBMIT >" />
