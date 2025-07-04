@@ -1,9 +1,7 @@
-<form class="regform"  action="/submission" method="POST" encType="multipart/form-data">
+<form class="regform" id="nomination_form"  action="/nomination" method="POST" encType="multipart/form-data">
     <!-- progressbar -->
     <ul id="progressbar">
         <li class="active li-active">Nomination Info</li>
-        <li id="hidden_div">Nominator Info</li>
-        <li>Nominee Info</li>
         <li>Nomination Details</li>
         <li>Additional Info</li>
         <li>Submit</li>
@@ -11,14 +9,14 @@
     <!-- fieldsets -->
     <fieldset id="first">
         <h2 class="title">Nomination Info</h2>
-        <select name="nomination" id="nomination" onchange="showDiv(this)" class="options" required>
+        <select name="nomination_type" id="nomination" class="options" required autocomplete="off">
             <option value="" disabled selected hidden>Select Nomination type*</option>
             <option>I am nominating myself</option>
             <option>I am nominating someone else</option>
             <option>I am nominating an organisation</option>
         </select>
         <br/>
-        <select name="category" id="categories" class="options" required>
+        <select name="nomination_category" id="categories" class="options" required>
             <option value="" disabled selected hidden>Select Nomination Category*</option>
             <option value="category1">Innovation In ICT Products or Services</option>
             <option value="category2">Best use of ICT</option>
@@ -31,7 +29,8 @@
             <option value="category9">The TISPA Awards for Best Internet Connectivity Provider</option>
             <option value="category10">The MCIT Lifetime Achievement In ICT</option>
         </select>
-        <select class="subcatagories" required>
+
+        <select name="nomination_subcategory" class="subcatagories" required>
             <option value="" disabled selected hidden>Select Nomination Subcategory*</option>
             <!-- Innovation In ICT Products or Services -->
             <optgroup data-rel="category1">
@@ -87,31 +86,22 @@
             </optgroup>
         </select>
         <br/>
-        <input type="button" class="next_btn margin-0" value="Next >" />
-    </fieldset>
-    <!-- Add and remove a class -->
-    <fieldset id="hidden_div">
         <h2 class="title">Nominator Info</h2>
-        <input type="text" placeholder="Nominator Full Name*" class="text_field" name="nominator_name"/>
+        <input type="text" placeholder="Nominator Name*" class="text_field" name="nominator_name"/>
         <br/>
         <input type="email" placeholder="Nominator Email*" class="text_field" name="nominator_email"/>
         <br/>
         <input type="text" placeholder="Nominator Phone Number*" class="text_field" name="nominator_phone"/>
         <br/>
-        <input type="button" class="pre_btn" value="< Back" />
-        <input type="button" class="next_btn margin-0" value="Next >"/>
-    </fieldset>
-    <fieldset>
         <h2 class="title">Nominee Info</h2>
-        <input type="text" placeholder="Nominee Full Name*" class="text_field" name="nominee_name"/>
+        <input type="text" placeholder="Nominee Name*" class="text_field" name="nominee_name"/>
         <br/>
         <input type="email" placeholder="Nominee Email*" class="text_field" name="nominee_email"/>
         <br/>
         <input type="text" placeholder="Nominee Phone Number*" class="text_field" name="nominee_phone"/>
         <br/>
-        <input type="text" placeholder="Website (if applicable)" class="text_field" name="website"/>
+        <input type="url" placeholder="Website (if applicable)" class="text_field" name="website"/>
         <br/>
-        <input type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn margin-0" value="Next >"/>
     </fieldset>
     <fieldset>
@@ -132,33 +122,31 @@
         <input type="button" class="next_btn margin-0" value="Next >"/>
     </fieldset>
     <fieldset>
-        <input type="text" class="text_field" name="reference_one" placeholder="Reference 1 Full Name" />
+        <input type="text" class="text_field" name="reference_one_name" placeholder="Reference 1 Name" />
         <br/>
-        <input type="text" class="text_field" name="reference_one" placeholder="Reference 1 Full Name" />
+        <input type="text" class="text_field" name="reference_one_phone" placeholder="Reference 1 Phone Number" />
         <br/>
-        <input type="text" class="text_field" name="reference_one" placeholder="Reference 1 Full Name" />
+        <input type="text" class="text_field" name="reference_one_email" placeholder="Reference 1 Email" />
         <br/>
-        <input type="text" class="text_field" name="reference_two_name" placeholder="Reference 2 Full Name" />
+        <input type="text" class="text_field" name="reference_two_name" placeholder="Reference 2 Name" />
         <br/>
         <input type="text" class="text_field" name="reference_two_phone" placeholder="Reference 2 Phone Number" />
         <br/>
         <input type="text" class="text_field" name="reference_two_email" placeholder="Reference 2 Email" />
         <br/>
         Attachments: (Upload any additional documents, reports, or media that support the nomination. Maximum 5 files)
-        <input id="input-b1" name="pdfFile" type="file" class="file pt-1" data-browse-on-zone-click="true">
+        <input id="input-b1" name="files" type="file" class="file pt-1" data-browse-on-zone-click="true">
         <br/>
         <input type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn" value="Next >" />
     </fieldset>
     <fieldset>
-        <h2 class="title">Are you ready to submit?</h2>
+        <h2 class="title">Declaration*</h2>
         <div class="term-and-conditions">
-            I confirm that the information provided in this nomination form is accurate and true to the best of my knowledge.
-
-I agree to be contacted for further information if required.
-
-For Nominator (i declare that there is no conflict of interest to the nominee i have chosen)
-            <input type="checkbox">  I authorize the TEHAMA Awards committee to use the information provided in this nomination for award purposes.
+            <p>I confirm that the information provided in this nomination form is accurate and true to the best of my knowledge.
+            I agree to be contacted for further information if required.
+            For Nominator (i declare that there is no conflict of interest to the nominee i have chosen)</p>
+            <input type="checkbox" name="declaration">  I authorize the TEHAMA Awards committee to use the information provided in this nomination for award purposes.
         </div>
         <input type="button" class="pre_btn" value="< Back" />
         <input style="background: #1375bc; color: white;" type="submit" class="next_btn" value="SUBMIT >" />

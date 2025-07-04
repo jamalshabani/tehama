@@ -42,13 +42,175 @@ $(".submit_btn").click(function(event){
 });
 
 /*---------------------------------------------------------*/
+    $(".next_btn").click(function(){           //Function runs on NEXT button click 
+        // validate the form
+        var form = $("#nomination_form");
+        form.validate({
+            errorElement: 'div',
+            errorClass: "container alert alert-danger",
+			rules: {
+				nomination_type: {
+					required: true
+				},
+                nomination_category: {
+                    required: true
+                },
+                nomination_subcategory: {
+                    required: true
+                },
+                nominator_name: {
+                    required: true,
+                    minlength: 2
+                },
+                nominator_email: {
+                    required: true,
+                    email: true
+                },
+                nominator_phone: {
+                    required: true
+                },
+                nominee_name: {
+                    required: true,
+                    minlength: 2
+                },
+                nominee_email: {
+                    required: true,
+                    email: true
+                },
+                nominee_phone: {
+                    required: true
+                },
+                nomination_reason: {
+                    required: true
+                },
+                supporting_evidence: {
+                    required: true
+                },
+                impact: {
+                    required: true
+                },
+                innovation: {
+                    required: true
+                },
+                sustainability: {
+                    required: true
+                },
+                inclusivity: {
+                    required: true
+                },
+                reference_one_name: {
+                    required: true
+                },
+                reference_one_phone: {
+                    required: true
+                },
+                reference_one_email: {
+                    required: true,
+                    email: true
+                },
+                reference_two_name: {
+                    required: true
+                },
+                reference_two_phone: {
+                    required: true
+                },
+                reference_two_email: {
+                    required: true,
+                    email: true
+                },
+                files: {
+                    required: true
+                },
+                declaration: {
+                    required: true
+                }
+                
+			},
+			messages: {
+				nomination_type: {
+					required: "Please select nomination type"
+				},
+                nomination_category: {
+                    required: "Please select nomination category"
+                },
+                nomination_subcategory: {
+                     required: "Please select nomination subcategory"
+                },
+                nominator_name: {
+                    required: "Please enter nominator name",
+                    minlength: "Name minimum length is 2"
+                },
+                nominator_email: {
+                    required: "Please enter nominator email",
+                    email: "Please enter a valid email"
+                },
+                nominator_phone: {
+                    required: "Please enter nominator phone number"
+                },
+                nominee_name: {
+                    required: "Please enter nominee name",
+                    minlength: "Name minimum length is 2"
+                },
+                nominee_email: {
+                    required: "Please enter nominee email",
+                    email: "Please enter a valid email"
+                },
+                nominee_phone: {
+                    required: "Please enter nominee phone number"
+                },
+                nomination_reason: {
+                    required: "Please provide reason(s) this nomination"
+                },
+                supporting_evidence: {
+                    required: "Please provide evidence to support this nomination"
+                },
+                impact: {
+                    required: "Please decribe positive impact of this nomination"
+                },
+                innovation: {
+                    required: "Please explain the novelty and creativity of this nomination"
+                },
+                sustainability: {
+                    required: "Please explain the long-term viability and scalability of this nomination"
+                },
+                inclusivity: {
+                    required: "Please explain how this nomination promotes digital inclusion"
+                }, 
+                reference_one_name: {
+                    required: "Please provide reference 1 name"
+                },
+                reference_one_phone: {
+                    required: "Please provide reference 1 phone number"
+                },
+                reference_one_email: {
+                    required: "Please provide reference 1 email",
+                    email: "Please provide a valid email"
+                },
+                reference_two_name: {
+                    required: "Please provide reference 2 name"
+                },
+                reference_two_phone: {
+                    required: "Please provide reference 2 phone number"
+                },
+                reference_two_email: {
+                    required: "Please provide reference 2 email",
+                    email: "Please provide a valid email"
+                },
+                files: {
+                    required: "Please upload supporting file(s)"
+                },
+                declaration: {
+                    required: "Please confirm"
+                }
+			}
+		});
 
-	
-	$(".next_btn").click(function(){           //Function runs on NEXT button click 
-	$(this).parent().next().fadeIn('slow');
-	$(this).parent().css({'display':'none'});
-//Adding class active to show steps forward;
-	$('.li-active').next().addClass('li-active active');
+        if (form.valid() == true){
+	        $(this).parent().next().fadeIn('slow');
+	        $(this).parent().css({'display':'none'});
+            //Adding class active to show steps forward;
+	        $('.li-active').next().addClass('li-active active');
+        }
 	});
 	
 	$(".pre_btn").click(function(){            //Function runs on PREVIOUS button click 

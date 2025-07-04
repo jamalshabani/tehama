@@ -439,7 +439,6 @@
         });
 
     });
-
 	
 	/*==========================================
        CountDownTimer
@@ -502,9 +501,3 @@ $(function(){
     });
 
 });
-
-function showDiv(select){
-   if(select.value == "I am nominating myself"){
-        document.getElementById('hidden_div').style.display = "none";
-   }
-} 
