@@ -9,6 +9,9 @@
     <!-- fieldsets -->
     <fieldset id="first">
         <h2 class="title">Nomination Info</h2>
+        <div class="container">
+            <input type="file" name="files">
+        </div>
         <select name="nomination_type" id="nomination" class="options" required autocomplete="off">
             <option value="" disabled selected hidden>Select Nomination type*</option>
             <option>I am nominating myself</option>
@@ -135,7 +138,14 @@
         <input type="text" class="text_field" name="reference_two_email" placeholder="Reference 2 Email" />
         <br/>
         Attachments: (Upload any additional documents, reports, or media that support the nomination. Maximum 5 files)
-        <input id="input-b1" name="files" type="file" class="file pt-1" data-browse-on-zone-click="true">
+        <input type="file" 
+            class="filepond"
+            name="filepond" 
+            multiple 
+            data-allow-reorder="true"
+            data-max-file-size="3MB"
+            data-max-files="3">
+        <input id="input-b1" name="files" type="file" multiple class="file pt-1" data-browse-on-zone-click="true">
         <br/>
         <input type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn" value="Next >" />
@@ -152,3 +162,12 @@
         <input style="background: #1375bc; color: white;" type="submit" class="next_btn" value="SUBMIT >" />
     </fieldset>
 </form>
+
+
+<script>
+    // enable fileuploader plugin
+	$('input[name="files"]').fileuploader({
+        addMore: true
+    });
+
+</script>
