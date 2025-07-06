@@ -107,11 +107,13 @@
 .filepond--drop-label.filepond--drop-label label {
     display: block;
     margin: 0;
+    color: white;
+    font-weight: bolder;
     padding: 0.5em; /* use padding instead of margin so click area is not impacted */
 }
 .filepond--drop-label label {
     cursor: default;
-    font-size: 0.875em;
+    font-size: 8.75em;
     font-weight: normal;
     text-align: center;
     line-height: 1.5;
@@ -826,7 +828,8 @@
 }
 .filepond--panel-root {
     border-radius: 0.5em;
-    background-color: #f1f0ef;
+    background: #1375bc;
+    
 }
 .filepond--panel {
     position: absolute;
@@ -834,6 +837,7 @@
     top: 0;
     right: 0;
     margin: 0;
+    width: 100%;
 
     /* defaults to 100% height (fixed height mode) this fixes problem with panel height in IE11 */
     height: 100% !important;

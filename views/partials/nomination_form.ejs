@@ -9,7 +9,13 @@
     <!-- fieldsets -->
     <fieldset id="first">
         <h2 class="title">Nomination Info</h2>
-        <input type="file" name="files">
+        <input type="file" 
+            class="filepond"
+            name="files" 
+            multiple 
+            data-allow-reorder="true"
+            data-max-file-size="3MB"
+            data-max-files="3">
         <select name="nomination_type" id="nomination" class="options" required autocomplete="off">
             <option value="" disabled selected hidden>Select Nomination type*</option>
             <option>I am nominating myself</option>
@@ -156,13 +162,20 @@
 </form>
 
 <script>
+    
             // Get a reference to the file input element
             const inputElement = document.querySelector('input[type="file"]');
 
             // Create the FilePond instance
             const pond = FilePond.create(inputElement, {
                 allowMultiple: true,
-                storeAsFile: true,
+                allowDrop: true,
+                allowBrowse: true,
+                allowPaste: true,
+                allowProcess: true,
+                maxFiles: 5,
+                maxParallelUploads: 5,
+
             });
 
             // Easy console access for testing purposes
