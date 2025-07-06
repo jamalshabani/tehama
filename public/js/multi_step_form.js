@@ -118,11 +118,12 @@ $(".submit_btn").click(function(event){
                     required: true,
                     email: true
                 },
-                files: {
-                    required: true
-                },
                 declaration: {
                     required: true
+                },
+                files: {
+                    required: true,
+                    extension: "png|pdf"
                 }
                 
 			},
@@ -196,11 +197,12 @@ $(".submit_btn").click(function(event){
                     required: "Please provide reference 2 email",
                     email: "Please provide a valid email"
                 },
-                files: {
-                    required: "Please upload supporting file(s)"
-                },
                 declaration: {
                     required: "Please confirm"
+                },
+                files: {
+                    required: "Please upload some documents to support this nomination",
+                    extension: "Ivalid file format. Only images and PDF are allowed"
                 }
 			}
 		});
@@ -214,10 +216,10 @@ $(".submit_btn").click(function(event){
 	});
 	
 	$(".pre_btn").click(function(){            //Function runs on PREVIOUS button click 
-	$(this).parent().prev().fadeIn('slow');
-	$(this).parent().css({'display':'none'});
-//Removing class active to show steps backward;
-	$('.active:last').removeClass('active');
+	    $(this).parent().prev().fadeIn('slow');
+	    $(this).parent().css({'display':'none'});
+        //Removing class active to show steps backward;
+	    $('.active:last').removeClass('active');
 	});
 	
 //validating all input and textarea fields	

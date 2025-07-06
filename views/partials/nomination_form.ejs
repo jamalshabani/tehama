@@ -9,13 +9,6 @@
     <!-- fieldsets -->
     <fieldset id="first">
         <h2 class="title">Nomination Info</h2>
-        <input type="file" 
-            class="filepond"
-            name="files" 
-            multiple 
-            data-allow-reorder="true"
-            data-max-file-size="3MB"
-            data-max-files="3">
         <select name="nomination_type" id="nomination" class="options" required autocomplete="off">
             <option value="" disabled selected hidden>Select Nomination type*</option>
             <option>I am nominating myself</option>
@@ -141,11 +134,17 @@
         <br/>
         <input type="text" class="text_field" name="reference_two_email" placeholder="Reference 2 Email" />
         <br/>
-        Attachments: (Upload any additional documents, reports, or media that support the nomination. Maximum 5 files)
-    
-        <input type="file" name="files">
         <br/>
-        <input type="button" class="pre_btn" value="< Back" />
+        <div class="container" style="width: 53%;">
+            Attachments: (Upload any additional documents, reports, or media that support this nomination. Maximum 5 files)
+            <input type="file" 
+                class="filepond"
+                name="files" 
+                multiple 
+                data-max-file-size="5MB"
+                data-max-files="5" required>
+        </div>
+        <input style="margin-top:50px;" type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn" value="Next >" />
     </fieldset>
     <fieldset>
@@ -162,22 +161,19 @@
 </form>
 
 <script>
-    
-            // Get a reference to the file input element
-            const inputElement = document.querySelector('input[type="file"]');
 
-            // Create the FilePond instance
-            const pond = FilePond.create(inputElement, {
-                allowMultiple: true,
-                allowDrop: true,
-                allowBrowse: true,
-                allowPaste: true,
-                allowProcess: true,
-                maxFiles: 5,
-                maxParallelUploads: 5,
+    // Get a reference to the file input element
+    const inputElement = document.querySelector(".filepond");
 
-            });
+    // Create the FilePond instance
+    const pond = FilePond.create(inputElement, {
+        allowMultiple: true,
+        allowDrop: true,
+        allowBrowse: true,
+        maxFiles: 5,
+        maxParallelUploads: 5
 
-            // Easy console access for testing purposes
-            window.pond = pond;
-        </script>
+    });
+    // Easy console access for testing purposes
+    window.pond = pond;
+</script>

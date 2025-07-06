@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { getHome, getCategories, getNomination, getSelection, getSponsorship, getGallery, getWinners } = require("../controllers/pages.controller");
-const { postSubmission } = require("../controllers/submission.controller");
+const { postNomination } = require("../controllers/nomination.controller");
 const { requireAuth, getCurrentUser } = require("../middlewares/auth.middleware");
 const { getUserSubmissions } = require("../middlewares/submission.middleware");
 
@@ -12,7 +12,7 @@ router.get("/categories", getCategories);
 
 router.get("/nomination", getNomination);
 
-router.post("/submission", postSubmission);
+router.post("/nomination", postNomination);
 
 router.get("/selection", getSelection);
 
