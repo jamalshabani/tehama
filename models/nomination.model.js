@@ -1,45 +1,134 @@
 const mongoose = require("mongoose")
 
 const nominationSchema = new mongoose.Schema({
-    firstname: {
+    nomination_type: {
         type: String,
-        required: [true, "Please enter your first name"]
+        required: true
     },
 
-    lastname: {
+    nomination_category: {
         type: String,
-        required: [true, "Please enter your last name"]
+        required: true
     },
 
-    email: {
+    nomination_subcategory: {
         type: String,
-        required: [true, "Please enter an email"]
+        required: true
+    },
+
+    nominator_name: {
+        type: String,
+        required: true
+    },
+
+    nominator_email: {
+        type: String,
+        required: true,
+        unique: true,
+        validate: [isEmail, "Please enter a valid email"]
+    },
+
+    nominator_phone: {
+        type: String,
+        required: true
+    },
+
+    nominee_name: {
+        type: String,
+        required: true
+    },
+
+    nominee_email: {
+        type: String,
+        required: true,
+        unique: true,
+        validate: [isEmail, "Please enter a valid email"]
+    },
+
+    nominee_phone: {
+        type: String,
+        required: true
+    },
+
+    website: {
+        type: String,
+        required: false
     },
     
-    category: {
+    nomination_reason: {
         type: String,
-        required: [true, "Please choose a category"]
+        required: true
     },
 
-    submitter: {
+    supporting_evidence: {
         type: String,
-        required: [true, "Please choose nomination type"]
+        required: true
     },
 
-    title: {
+    impact: {
         type: String,
-        required: [true, "Please enter a title"]
-    },
-
-    pdfFile: {
-        type: String,
-        required: [true, "Please upload a nomination PDF"]
+        required: true
     },
 
     details: {
         type: String,
         required: true
-    }
+    },
+        
+    innovation: {
+        type: String,
+        required: true
+    },
+        
+    sustainability: {
+        type: String,
+        required: true
+    },
+
+    inclusivity: {
+        type: String,
+        required: true
+    },
+
+    reference_one_name: {
+        type: String,
+        required: true
+    },
+
+    reference_one_phone: {
+        type: String,
+        required: true
+    },
+
+    reference_one_email: {
+        type: String,
+        required: true,
+        unique: true,
+        validate: [isEmail, "Please enter a valid email"]
+    },
+
+    reference_two_name: {
+        type: String,
+        required: true
+    },
+
+    reference_two_phone: {
+        type: String,
+        required: true
+    },
+
+    reference_two_email: {
+        type: String,
+        required: true,
+        unique: true,
+        validate: [isEmail, "Please enter a valid email"]
+    },
+
+    files: {
+        type: String,
+        required: true
+    },
+
 }, { timestamps: true }
 )
 
