@@ -28,6 +28,11 @@ const getWinners = (req, res) => {
     res.render("pages/winners", {title: "Winners"});
 }
 
+const getContactUs = (req, res) => {
+    res.render("pages/contactus", {title: "Contact Us"});
+}
+
+
 
 module.exports = {
     getHome,
@@ -36,5 +41,6 @@ module.exports = {
     getSelection,
     getSponsorship,
     getGallery,
-    getWinners
+    getWinners,
+    getContactUs
 }

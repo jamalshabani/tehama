@@ -3535,8 +3535,8 @@ ul {
   cursor: pointer;
 }
 .contact-us-page-area .leave-comments-area fieldset .btn-send:hover {
-  background: #b52929;
-  box-shadow: none;
+  background: 1375bc;
+  box-shadow: 2px 0px 11px 0px #1375bc;
 }
 /* ------------------------------------
 23.404 Page Area Start Here 
