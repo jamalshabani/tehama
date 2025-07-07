@@ -4421,8 +4421,7 @@ fieldset .filepond--file-wrapper{
   float: right;
 }
 .home-faq-area {
-  padding: 94px 0 95px;
-  background: url('imagez/faq.jpg') no-repeat;
+  padding: 50px 0 50px;
   background-size: cover;
   background-position: center center;
 }
