@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { getHome, getCategories, getNomination, getSelection, getSponsorship, getGallery, getWinners, getContactUs } = require("../controllers/pages.controller");
 const { postNomination } = require("../controllers/nomination.controller");
-const { requireAuth, getCurrentUser } = require("../middlewares/auth.middleware");
-const { getUserSubmissions } = require("../middlewares/submission.middleware");
 
 
 router.get("/", getHome);

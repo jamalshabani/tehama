@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const submissionSchema = new mongoose.Schema({
+const nominationSchema = new mongoose.Schema({
     firstname: {
         type: String,
         required: [true, "Please enter your first name"]
@@ -23,7 +23,7 @@ const submissionSchema = new mongoose.Schema({
 
     submitter: {
         type: String,
-        required: [true, "Please choose submission type"]
+        required: [true, "Please choose nomination type"]
     },
 
     title: {
@@ -33,7 +33,7 @@ const submissionSchema = new mongoose.Schema({
 
     pdfFile: {
         type: String,
-        required: [true, "Please upload a submission PDF"]
+        required: [true, "Please upload a nomination PDF"]
     },
 
     details: {
@@ -43,6 +43,6 @@ const submissionSchema = new mongoose.Schema({
 }, { timestamps: true }
 )
 
-const Submission = mongoose.model("Submission", submissionSchema)
+const nomination = mongoose.model("nomination", nominationSchema)
 
-module.exports = Submission
+module.exports = nomination
