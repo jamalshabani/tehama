@@ -199,7 +199,7 @@ $(".submit_btn").click(function(event){
                 declaration: {
                     required: "Please confirm"
                 },
-                files: {
+                nomination_files: {
                     required: "Please upload some documents to support this nomination"
                 }
 			}

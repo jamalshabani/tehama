@@ -124,7 +124,7 @@ const nominationSchema = new mongoose.Schema({
         validate: [isEmail, "Please enter a valid email"]
     },
 
-    files: {
+    nomination_files: {
         type: String,
         required: true
     },
