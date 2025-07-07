@@ -122,8 +122,7 @@ $(".submit_btn").click(function(event){
                     required: true
                 },
                 files: {
-                    required: true,
-                    extension: "png|pdf"
+                    required: true
                 }
                 
 			},
@@ -201,8 +200,7 @@ $(".submit_btn").click(function(event){
                     required: "Please confirm"
                 },
                 files: {
-                    required: "Please upload some documents to support this nomination",
-                    extension: "Ivalid file format. Only images and PDF are allowed"
+                    required: "Please upload some documents to support this nomination"
                 }
 			}
 		});

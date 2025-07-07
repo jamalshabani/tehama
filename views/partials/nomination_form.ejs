@@ -134,7 +134,6 @@
         <br/>
         <input type="text" class="text_field" name="reference_two_email" placeholder="Reference 2 Email" />
         <br/>
-        <br/>
         <div class="container" style="width: 53%;">
             Attachments: (Upload any additional documents, reports, or media that support this nomination. Maximum 5 files)
             <input type="file" 
@@ -144,6 +143,7 @@
                 data-max-file-size="5MB"
                 data-max-files="5" required>
         </div>
+        <br/>
         <input style="margin-top:50px;" type="button" class="pre_btn" value="< Back" />
         <input type="button" class="next_btn" value="Next >" />
     </fieldset>
@@ -161,7 +161,11 @@
 </form>
 
 <script>
-
+    
+    FilePond.registerPlugin(
+		FilePondPluginFileValidateSize,
+		FilePondPluginFileValidateType
+	);
     // Get a reference to the file input element
     const inputElement = document.querySelector(".filepond");
 
@@ -171,9 +175,10 @@
         allowDrop: true,
         allowBrowse: true,
         maxFiles: 5,
-        maxParallelUploads: 5
+        maxFileSize: "5MB",
+        maxParallelUploads: 5,
+        allowFileTypeValidation: true,
+        acceptedFileTypes: ["image/*", "application/pdf", "application/msword"]
 
     });
-    // Easy console access for testing purposes
-    window.pond = pond;
 </script>
