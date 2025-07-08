@@ -136,6 +136,7 @@
         <br/>
         <div class="container" style="width: 53%;">
             Attachments: (Upload any additional documents, reports, or media that support this nomination. Maximum 5 files)
+            <span style="color: red; font-weight: bolder;">*Only images and PDFs are allowed.</span>
             <input type="file" 
                 class="filepond"
                 name="nomination_files" 
@@ -179,7 +180,7 @@
         maxFileSize: "5MB",
         maxParallelUploads: 5,
         allowFileTypeValidation: true,
-        acceptedFileTypes: ["image/*", "application/pdf", "application/msword"]
+        acceptedFileTypes: ["image/*", "application/pdf"]
 
     });
 

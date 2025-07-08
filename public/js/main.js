@@ -455,16 +455,16 @@
 		circle_bg_color: "#e1e1e1",
 		time: {
 			Days:{
-				color: "#ff574f"
+				color: "#1375bc"
 			},
 			Hours:{
-				color: "#ff574f"
+				color: "#1375bc"
 			},
 			Minutes:{
-				color: "#ff574f"
+				color: "#1375bc"
 			},
 			Seconds:{
-				color: "#ff574f"
+				color: "#1375bc"
 			}
 		}
 	});	

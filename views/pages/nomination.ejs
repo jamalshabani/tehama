@@ -35,6 +35,50 @@
     </div>  
 </div>
 <% } %>
+
+<% if (true) { %>
+<!-- Nomination Timer Start Here -->
+<div class="home-about-photo-contest-area pt-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 mb-50">
+                <div class="single-section text-center">
+                    <h2 class="headding-title">Nomination window is currently closed.</h2>
+                    <h5 class="headding-title text-muted">Nomination window will open on</h5>
+                    <ul id="meta-text">
+                        <li class="date"><i class="fa fa-calendar-check-o"></i>February 01, 2026</li>
+                    </ul>
+                    <div class="countdown-section">
+                        <div class="row">
+                            <div class="offset-md-3 offset-sm-3 col-sm-6">
+                                <% 
+                                    function getSecondsToDate() {
+                                        const now = Date.now(); // Get current timestamp in milliseconds
+                                        const futureDate = new Date('2026-02-01T23:59:59');
+                                        const futureTimestamp = futureDate.getTime(); // Get target date timestamp in milliseconds
+
+                                        const differenceInMilliseconds = futureTimestamp - now;
+                                        const differenceInSeconds = Math.floor(differenceInMilliseconds / 1000);
+
+                                        return differenceInSeconds;
+                                    }
+                                %>
+                                <div class="CountDownTimer" data-timer="<%= getSecondsToDate() %>"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="des">Please check back later. </p>
+                    <div class="link-section">
+                        <a href="/" class="read-btn primary-btn"><i class="fa fa-home"></i> Home</a>
+                        <a href="/categories" class="read-btn primary-btn"><i class="fa fa-th-list"></i> Categories</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nomination Timer End Here -->
+<% } else { %>
 <!-- Multistep Form Start Here -->
 <div class="multistep-form pt-100 pb-100">
     <div class="container">
@@ -50,3 +94,4 @@
     </div>
 </div>
 <!-- Multistep Form End Here -->
+<% } %>

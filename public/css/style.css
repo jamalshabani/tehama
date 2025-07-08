@@ -1046,9 +1046,9 @@ ul {
   -ms-transition: 0.4s;
 }
 .home-about-photo-contest-area .link-section a.primary-btn:hover {
-  background: #b52929;
-  border-color: #b52929;
-  box-shadow: none;
+  background: #1375bc;
+  border-color: #1375bc;
+  box-shadow: 2px 0px 11px 0px #1375bc;
 }
 .home-about-photo-contest-area .link-section a.primary-btn.joni-btn {
   background: transparent;
