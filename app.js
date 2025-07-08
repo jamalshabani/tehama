@@ -1,7 +1,6 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const methodOverride = require("method-override");
-const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const pagesRoutes = require("./routes/pages.route");
 require("dotenv").config()
@@ -32,7 +31,6 @@ mongoose.connect(dbConnection).then(() =>
 app.use(expressLayouts)
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true}))
-app.use(cookieParser())
 app.use(methodOverride("_method"))
 app.use(express.static("public"))
 app.use(fileUpload());
