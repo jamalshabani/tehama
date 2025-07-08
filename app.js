@@ -4,7 +4,6 @@ const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const pagesRoutes = require("./routes/pages.route");
-const authRoutes = require("./routes/auth.route");
 require("dotenv").config()
 
 
@@ -46,9 +45,6 @@ app.use ((req, res, next) => {
     next();
 });
 
-
-// All auth pages
-app.use(authRoutes);
 
 // All pages routes
 app.use(pagesRoutes);
