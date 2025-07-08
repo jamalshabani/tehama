@@ -12,6 +12,29 @@
     </div>
 </div>
 
+<% if (message == "success")  { %>
+<div class="container">
+    <div class="alert alert-success alert-white rounded">
+        <div class="icon">
+            <i class="fa fa-check"></i>
+        </div>
+        <strong>Success!</strong> 
+        Your nomination has been submitted successfully!
+    </div>
+</div>
+<% } %>
+
+<% if (message == "error")  { %>
+<div class="container">
+    <div class="alert alert-danger alert-white rounded">
+        <div class="icon">
+            <i class="fa fa-times-circle"></i>
+        </div>
+        <strong>Error!</strong> 
+        Something went wrong. Please try again!
+    </div>  
+</div>
+<% } %>
 <!-- Multistep Form Start Here -->
 <div class="multistep-form pt-100 pb-100">
     <div class="container">

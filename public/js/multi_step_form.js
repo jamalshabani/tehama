@@ -2,8 +2,7 @@ $(document).ready(function(){
 var count=0; // to count blank fields
 
 /*------------validation function-----------------*/
-$(".submit_btn").click(function(event){
-//fetching radio button by name
+$(".submit_btn").click(function(event){  //fetching radio button by name
 	var radio_check = $('.rad');
 	
 	//fetching all inputs with same class name text_field and an html tag textarea 

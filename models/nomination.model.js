@@ -23,9 +23,7 @@ const nominationSchema = new mongoose.Schema({
 
     nominator_email: {
         type: String,
-        required: true,
-        unique: true,
-        validate: [isEmail, "Please enter a valid email"]
+        required: true
     },
 
     nominator_phone: {
@@ -40,9 +38,7 @@ const nominationSchema = new mongoose.Schema({
 
     nominee_email: {
         type: String,
-        required: true,
-        unique: true,
-        validate: [isEmail, "Please enter a valid email"]
+        required: true
     },
 
     nominee_phone: {
@@ -70,11 +66,6 @@ const nominationSchema = new mongoose.Schema({
         required: true
     },
 
-    details: {
-        type: String,
-        required: true
-    },
-        
     innovation: {
         type: String,
         required: true
@@ -102,9 +93,7 @@ const nominationSchema = new mongoose.Schema({
 
     reference_one_email: {
         type: String,
-        required: true,
-        unique: true,
-        validate: [isEmail, "Please enter a valid email"]
+        required: true
     },
 
     reference_two_name: {
@@ -119,13 +108,11 @@ const nominationSchema = new mongoose.Schema({
 
     reference_two_email: {
         type: String,
-        required: true,
-        unique: true,
-        validate: [isEmail, "Please enter a valid email"]
+        required: true
     },
 
     nomination_files: {
-        type: String,
+        type: [String],
         required: true
     },
 

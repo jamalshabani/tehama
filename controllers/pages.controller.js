@@ -9,7 +9,7 @@ const getCategories = (req, res) => {
 }
 
 const getNomination = (req, res) => {
-    res.render("pages/nomination", {title: "Nomination"});
+    res.render("pages/nomination", {title: "Nomination", message: ""});
 }
 
 const getSelection = (req, res) => {

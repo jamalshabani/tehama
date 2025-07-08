@@ -1,4 +1,4 @@
-<form class="regform" id="nomination_form"  action="/nomination" method="POST">
+<form class="regform" id="nomination_form"  action="/nomination" method="POST" enctype="multipart/form-data">
     <!-- progressbar -->
     <ul id="progressbar">
         <li class="active li-active">Nomination Info</li>
@@ -175,10 +175,12 @@
         allowDrop: true,
         allowBrowse: true,
         maxFiles: 5,
+        storeAsFile: true,
         maxFileSize: "5MB",
         maxParallelUploads: 5,
         allowFileTypeValidation: true,
         acceptedFileTypes: ["image/*", "application/pdf", "application/msword"]
 
     });
+
 </script>
